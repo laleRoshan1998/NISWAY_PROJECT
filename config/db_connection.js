@@ -1,15 +1,15 @@
 // const { count } = require("console");
 const fs=require("fs")
-
+require("dotenv").config()
 
 
 const knex = require('knex')({
     client: 'mysql',
     connection:{
-        host: 'localhost',
-        user: "root",
-        database: 'salary_data',
-        password: "Roshan@1"
+        host: process.env.MYSQLHOST,
+        user: process.env.MYSQLUSER,
+        database: process.env.MYSQLDATABASE,
+        password:process.env.MYSQLPASSWORD
     }
 })
 // console.log("we are here");
