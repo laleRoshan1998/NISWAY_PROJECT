@@ -2,7 +2,7 @@
 const express = require('express')
 const knex = require('./config/db_connection.js')
 const app = express()
-const port = process.env.MYSQLPORTR
+const port = process.env.PORT||3030
 
 const router = require("./Router/main")
 
