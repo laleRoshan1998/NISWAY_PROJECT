@@ -9,9 +9,11 @@ const knex = require('knex')({
         host: process.env.MYSQLHOST,
         user: process.env.MYSQLUSER,
         database: process.env.MYSQLDATABASE,
-        password:process.env.MYSQLPASSWORD
+        password:process.env.MYSQLPASSWORD,
+        port:process.env.MYSQLPORTR
     }
 })
+
 // console.log("we are here");
 knex.schema.createTable("company_bio_data",t=>{
     t.increments().primary()
